@@ -47,7 +47,7 @@ SkipServiceState|yes|Skips service state files (.InstallLog, .InstallState) to p
 
 ## Build
 
-Build requires Visual Studio 2015 as it makes use of some C# 6 featured
+Build requires Visual Studio 2015 as it makes use of some C# 6 features
 
 The extension currently needs to be built against Web Deploy 3.5, as 3.6 introduced a strange dual-dependency between .NET 3.5 and 4.0 that causes havok in Visual Studio. If you already have Web Deploy 3.6 installed, you can extract Web Deploy 3.5 using the following command:
 
