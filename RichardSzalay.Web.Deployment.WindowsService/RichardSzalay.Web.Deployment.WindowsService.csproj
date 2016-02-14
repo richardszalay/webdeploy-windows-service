@@ -32,17 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-	<MSDeployAssemblyPath Condition="'$(MSDeployAssemblyPath)' == ''">C:\Program Files\IIS\Microsoft Web Deploy V3</MSDeployAssemblyPath>
+    <MSDeployAssemblyPath Condition="'$(MSDeployAssemblyPath)' == ''">C:\Program Files\IIS\Microsoft Web Deploy V3</MSDeployAssemblyPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Web.Delegation, Version=7.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-	  <SpecificVersion>False</SpecificVersion>
-	  <HintPath>$(MSDeployAssemblyPath)\Microsoft.Web.Delegation.dll</HintPath>
-	</Reference>
-	<Reference Include="Microsoft.Web.Deployment, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-	  <SpecificVersion>False</SpecificVersion>
-	  <HintPath>$(MSDeployAssemblyPath)\Microsoft.Web.Deployment.dll</HintPath>
-	</Reference>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(MSDeployAssemblyPath)\Microsoft.Web.Delegation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Deployment, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(MSDeployAssemblyPath)\Microsoft.Web.Deployment.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
@@ -65,7 +65,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServicePathProviderSettingInfo.cs" />
+    <Compile Include="ServiceTimeoutSettingInfo.cs" />
     <Compile Include="SkipServiceStateRuleHandler.cs">
       <SubType>Component</SubType>
     </Compile>

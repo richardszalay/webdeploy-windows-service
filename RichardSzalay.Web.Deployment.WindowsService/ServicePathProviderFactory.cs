@@ -23,7 +23,7 @@ namespace RichardSzalay.Web.Deployment.WindowsService
         {
             return new[]
             {
-                new ServicePathProviderSettingInfo(Name)
+                new ServiceTimeoutSettingInfo(Name)
             };
         }
     }

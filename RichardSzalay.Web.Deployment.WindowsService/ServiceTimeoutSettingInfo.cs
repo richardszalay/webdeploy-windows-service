@@ -4,9 +4,9 @@ using System;
 
 namespace RichardSzalay.Web.Deployment.WindowsService
 {
-    public class ServicePathProviderSettingInfo : DeploymentProviderSettingInfo
+    public class ServiceTimeoutSettingInfo : DeploymentProviderSettingInfo
     {
-        public ServicePathProviderSettingInfo(string providerFactoryName)
+        public ServiceTimeoutSettingInfo(string providerFactoryName)
             : base("serviceTimeout", providerFactoryName)
         {
 
