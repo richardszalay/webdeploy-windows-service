@@ -43,7 +43,7 @@ namespace RichardSzalay.Web.Deployment.WindowsService
                 }
             }
 
-            base.PreSync(syncContext);
+            base.PostSync(syncContext);
         }
     }
 }
