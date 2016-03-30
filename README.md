@@ -22,7 +22,7 @@ msdeploy -verb:sync ^
 
 ### Server Configuration
 
-TODO: Information on how to continue non-Administrator deployments
+TODO: Information on how to configure non-Administrator deployments
 
 
 ## Usage
