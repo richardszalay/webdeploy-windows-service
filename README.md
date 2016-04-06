@@ -22,8 +22,35 @@ msdeploy -verb:sync ^
 
 ### Server Configuration
 
-TODO: Information on how to configure non-Administrator deployments
+Install the extension on the server using the same instructions as above. If running a non-administrator deployment via msdeploy.axd, the following steps will be required:
 
+1. Configure delegation rules for `servicePath`
+2. Grant file system permissions
+3. Grant service permissions
+
+#### Configuring Delegation Rules
+
+In IIS, find "Management Service Delegation" and create a new Blank Rule with the following settings:
+
+- **Providers:** servicePath
+- **Actions:** *
+- **Path Type:** Path Prefix
+- **Path:** *ServiceName*
+- **Identity:** SpecificUser (w/ admin access) or CurrentUser (w/ ACL configuration)
+
+#### Granting File System Permissions
+
+As with website deployments, the user will require "Full" access to directory with the service's files.
+
+#### Granting Service Permissions
+
+If _CurrentUser_ was selected as part of the delegation rule, the deployment user must be granted access to start/stop the service in question. To do this, download Subinacl and run:
+
+```
+subinacl.exe /service ServiceName /GRANT=MACHINE\deploy_user=STO
+```
+
+Alternatively, `sc sdshow` and `sc sdset` can be used but their syntax is signficantly more complex and can result in corrupting your existing permissions.
 
 ## Usage
 
