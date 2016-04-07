@@ -47,7 +47,7 @@ As with website deployments, the user will require "Full" access to directory wi
 If _CurrentUser_ was selected as part of the delegation rule, the deployment user must be granted access to start/stop the service in question. To do this, download Subinacl and run:
 
 ```
-subinacl.exe /service ServiceName /GRANT=MACHINE\deploy_user=STO
+subinacl.exe /service ServiceName /GRANT=MACHINE\deploy_user=QSTO
 ```
 
 Alternatively, `sc sdshow` and `sc sdset` can be used but their syntax is signficantly more complex and can result in corrupting your existing permissions.
